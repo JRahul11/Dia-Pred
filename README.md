@@ -15,6 +15,10 @@
 <img src="https://user-images.githubusercontent.com/62005970/137258262-ebb3a357-7eac-43f0-b89a-20930bfdee59.png" width="1080" height="490">
 <br>
 
+Machine Learning Model: Logistic Regression <br>
+Dataset: Pima Indian Dataset (https://www.kaggle.com/uciml/pima-indians-diabetes-database) <br>
+Accuracy Score: Approx 90% <br> <br>
+
 Steps to run the project:
 1. Clone the repository.
 2. Go to settings.py and scroll to the botton and change the email address and password (Emails will be sent from this account).
