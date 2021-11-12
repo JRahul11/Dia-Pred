@@ -15,7 +15,7 @@ def user_signup(request):
                 "error": True,
                 "error_msg": "Email already registered"
             }
-            return render(request, "auth_app/signup.html", context)
+            return render(request, "auth_app/user_signup.html", context)
         except User.DoesNotExist:
             pw = ""
             text = "abcdefghijklmnopqrstuvwxyz"
@@ -32,7 +32,7 @@ def user_signup(request):
             usr.save()
             return redirect("login")
     else:
-        return render(request, "auth_app/signup.html")
+        return render(request, "auth_app/user_signup.html")
 
 
 def user_login(request):
@@ -45,12 +45,12 @@ def user_login(request):
                 "error": True,
                 "error_msg": "Check Credentials"
             }
-            return render(request, "auth_app/login.html", context)
+            return render(request, "auth_app/user_login.html", context)
         else:
             login(request, usr)
             return redirect("home")
     else:
-        return render(request, "auth_app/login.html")
+        return render(request, "auth_app/user_login.html")
 
 
 def user_logout(request):

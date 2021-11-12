@@ -25,8 +25,9 @@ def predict(request):
             data_list.append(float(request.POST.get('dpf')))
             data_list.append(int(request.POST.get('age')))
 
-            model = joblib.load('static/model/model.sav')
+            model = joblib.load('static/model/rfc_model.sav')
             result = model.predict([data_list])
+            print(result)
             if result == 1:
                 resulttext = "Positive"
             else:
